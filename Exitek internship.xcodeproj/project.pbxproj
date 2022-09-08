@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48AE5D7328CA380300219386 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE5D7228CA380300219386 /* main.swift */; };
+		48AE5D7A28CA386A00219386 /* MobileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE5D7928CA386A00219386 /* MobileStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		48AE5D6F28CA380300219386 /* Exitek internship */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Exitek internship"; sourceTree = BUILT_PRODUCTS_DIR; };
-		48AE5D7228CA380300219386 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		48AE5D7928CA386A00219386 /* MobileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		48AE5D7128CA380300219386 /* Exitek internship */ = {
 			isa = PBXGroup;
 			children = (
-				48AE5D7228CA380300219386 /* main.swift */,
+				48AE5D7928CA386A00219386 /* MobileStorage.swift */,
 			);
 			path = "Exitek internship";
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 				TargetAttributes = {
 					48AE5D6E28CA380300219386 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -120,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48AE5D7328CA380300219386 /* main.swift in Sources */,
+				48AE5D7A28CA386A00219386 /* MobileStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +244,17 @@
 		48AE5D7728CA380300219386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S492U2SLH9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,9 +262,15 @@
 		48AE5D7828CA380300219386 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S492U2SLH9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
